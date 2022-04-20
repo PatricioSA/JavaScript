@@ -8,11 +8,11 @@ let altura = 1.77
 
 let cpf = '123.456.789-80'
 
-let rg = 'mg-235.265'
+let rg = 'mg-235.265.55'
 
 document.write(`Nome: ${nome} <br>`)
 document.write(`Idade: ${idade} <br>`)
-document.write(`Peso: ${Peso} <br>`)
-document.write(`Altura: ${altura} <br>`)
+document.write(`Peso: ${Peso} kg <br>`)
+document.write(`Altura: ${altura} cm <br>`)
 document.write(`CPF: ${cpf} <br>`)
 document.write(`RG: ${rg}`)
