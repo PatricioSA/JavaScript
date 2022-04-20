@@ -10,4 +10,9 @@ let cpf = '123.456.789-80'
 
 let rg = 'mg-235.265'
 
-document.write(`nome: ${nome}`)
+document.write(`Nome: ${nome} <br>`)
+document.write(`Idade: ${idade} <br>`)
+document.write(`Peso: ${Peso} <br>`)
+document.write(`Altura: ${altura} <br>`)
+document.write(`CPF: ${cpf} <br>`)
+document.write(`RG: ${rg}`)
