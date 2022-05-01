@@ -14,25 +14,25 @@
     
     <main class="container">
         <header>
-            <h1 class="text-danger">Radar</h1>
+            <h1>Cálculo de aumento salarial</h1>
             <hr>
         </header>
 
         <script>
-            let velocidade = prompt('Insira sua velocidade')
-            velocidade = parseInt(velocidade)
+            let salario = prompt('Digite seu salário')
+            salario = parseFloat(salario)
 
-            if(velocidade < 0) {
-                mensagem = 'Velocidade inválida!'
-            }else if(velocidade > 60) {
-                mensagem = 'Limite de velocidade acima do permitido!'
+            if(salario <= 1000) {
+                aumento = salario * 0.1 + salario
+            }else if(salario > 1000 && salario <= 1500) {
+                aumento = salario * 0.05 + salario
             }else {
-                mensagem = 'Velocidade permitida!'
+                aumento = 'Não receberá aumento'
             }
         </script>
 
-        <h2><script>document.write(`${velocidade} km/h`)</script></h2>
-        <h2><script>document.write(`${mensagem}`)</script></h2>
+        <h2><script>document.write(`Salário atual: ${salario}`)</script></h2>
+        <h2 class="text-success"><script>document.write(`Novo salário: ${aumento}`)</script></h2>
     </main>
 
 

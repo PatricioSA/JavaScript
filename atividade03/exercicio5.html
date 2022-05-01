@@ -14,25 +14,23 @@
     
     <main class="container">
         <header>
-            <h1 class="text-danger">Radar</h1>
+            <h1>Cálculo de preço de passagem de viagem</h1>
             <hr>
         </header>
 
         <script>
-            let velocidade = prompt('Insira sua velocidade')
-            velocidade = parseInt(velocidade)
+            let distancia = prompt('Insira a distância')
+            distancia = parseInt(distancia)
 
-            if(velocidade < 0) {
-                mensagem = 'Velocidade inválida!'
-            }else if(velocidade > 60) {
-                mensagem = 'Limite de velocidade acima do permitido!'
-            }else {
-                mensagem = 'Velocidade permitida!'
+            if(distancia <= 200) {
+                precoPassagem = 0.70 * distancia
+            }else if(distancia > 200) {
+                precoPassagem = 0.40 * distancia
             }
         </script>
 
-        <h2><script>document.write(`${velocidade} km/h`)</script></h2>
-        <h2><script>document.write(`${mensagem}`)</script></h2>
+        <h2><script>document.write(`${distancia} km`)</script></h2>
+        <h2><script>document.write(`A passagem custará R$${precoPassagem}`)</script></h2>
     </main>
 
 

@@ -14,25 +14,21 @@
     
     <main class="container">
         <header>
-            <h1 class="text-danger">Radar</h1>
+            <h1>JavaScript: <span class="text-success">Atividade 03</span></h1>
             <hr>
         </header>
 
-        <script>
-            let velocidade = prompt('Insira sua velocidade')
-            velocidade = parseInt(velocidade)
+        <section class="fs-4">
+            <ol>
+                <li><a class="text-decoration-none" href="exercicio1.html">Par ou Impar</a></li>
+                <li><a class="text-decoration-none" href="exercicio2.html">Qual é o maior número?</a></li>
+                <li><a class="text-decoration-none" href="exercicio3.html">Radar</a></li>
+                <li><a class="text-decoration-none" href="exercicio4.html">Aumento salarial</a></li>
+                <li><a class="text-decoration-none" href="exercicio5.html">Preço de passagem</a></li>
+                <li><a class="text-decoration-none" href="exercicio6.html">Cálculo de salário</a></li>
+            </ol>
+        </section>
 
-            if(velocidade < 0) {
-                mensagem = 'Velocidade inválida!'
-            }else if(velocidade > 60) {
-                mensagem = 'Limite de velocidade acima do permitido!'
-            }else {
-                mensagem = 'Velocidade permitida!'
-            }
-        </script>
-
-        <h2><script>document.write(`${velocidade} km/h`)</script></h2>
-        <h2><script>document.write(`${mensagem}`)</script></h2>
     </main>
 
 
