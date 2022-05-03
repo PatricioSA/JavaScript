@@ -15,7 +15,21 @@
             color: #abc5cf;
         }
 
-        h1 {
+        h1 span {
+            color: #a60311;
+        }
+
+        a {
+            color: #abc5cf;
+            padding: 3px;
+        }
+
+        a:hover {
+            background-color: #a60311;
+            border-radius: 5px;
+            color: #f2f2f2;
+        }
+        li:hover {
             color: #a60311;
         }
     </style>
@@ -24,35 +38,18 @@
     
     <main class="container">
         <header>
-            <h1>Switch</h1>
+            <h1 class="display-2">JavaScript: <span>Atividade 04 - Switch</span></h1>
             <hr>
         </header>
 
-        <section class="fs-3">
-            1 - Pizza <br>
-            2 - Hambúrguer <br>
-            3 - Pastel
+        <section class="fs-4">
+            <ol>
+                <li><a class="text-decoration-none" href="exercicio1.html">Exercício 1</a></li>
+                <li><a class="text-decoration-none" href="exercicio2.html">Exercício 2</a></li>
+                <li><a class="text-decoration-none" href="exercicio3.html">Exercício 3</a></li>
+            </ol>
         </section>
-
-        <script>
-            let escolha = prompt('Escolha um lanche \n1- Pizza \n2- Hambúrguer \n3- Pastel')
-            escolha = parseInt(escolha)
-
-            switch(escolha) {
-                case 1:
-                    resposta = 'Você escolheu Pizza'
-                    break
-                case 2:
-                    resposta = 'Você escolheu Hambúrguer'
-                    break
-                case 3:
-                    resposta = 'Você escolheu Pastel'
-                    break
-            }
-
-        </script>
-
-        <h2 class="display-2"><script>document.write(`${resposta}`)</script></h2>
+        
     </main>
 
 
