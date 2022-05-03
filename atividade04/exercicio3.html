@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Javascript</title>
+</head>
+<body>
+    
+    <main class="container">
+        <header>
+            <h1>Switch</h1>
+            <hr>
+        </header>
+
+        <section class="fs-3">
+            a) Cálculo de número primo simples <br>
+            b) Cálculo de Massa Corporal (imc) <br>
+            c) Velocidade média<br>
+            d) Conversão de temperatura F para C
+        </section>
+
+        <script>
+            let escolha = prompt('Escolha uma opção \na)Cálculo de número primo simples \nb)Cálculo de Massa Corporal (imc)  \nc)Velocidade média' +
+            '\nd) Conversão de temperatura °F para °C')
+
+            switch(escolha) {
+                case 'a':
+                    resposta = ''
+                    break
+                case 'b':
+                    let peso = prompt('Insira seu peso')
+                    let altura = prompt('Insira sua altura')
+                    peso = parseFloat(peso)
+                    altura = parseFloat(altura)
+                    let imc = peso * (altura**2)
+                    document.write(`Seu índice de massa corporal é: ${imc}`)
+                    break
+                case 'c':
+                    resposta = ''
+                    break
+                case 'd':
+                    resposta = ''
+                    break
+            }
+
+        </script>
+
+        <h2><script>document.write(`${imc}`)</script></h2>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+</html>
