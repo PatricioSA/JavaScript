@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Javascript</title>
+</head>
+<body>
+    
+    <main class="container">
+        <header>
+            <h1>Atividade Funções Strings</h1>
+            <hr>
+        </header>
+
+        <ul class="fs-5">
+            <li>Quantidade de caracteres da frase</li>
+            <li>Primeira posição do caractere "a"</li>
+            <li>Substituir a frase por outra</li>
+            <li>Mostra os 10 primeiros caracteres</li>
+            <li>Formatar a frase em caixa alta</li>
+            <li>Formatar frase em caixa baixa</li>
+        </ul>
+
+        <script>
+            let frase = prompt('Digite uma frase')
+            let escolha = parseInt(prompt('Escolha uma opção: \n1. Quantidade de caracteres da frase \n2. Primeira posição do caractere "a" \n3. Substituir a frase por outra' +
+            '\n4. Mostra os 10 primeiros caracteres \n5. Formatar a frase em caixa alta \n6. Formatar frase em caixa baixa'))
+
+            switch(escolha) {
+                case 1:
+                    let quantidadeCaractere = frase.length
+                    document.write(`<h2>A quantidade de caracteres é ${quantidadeCaractere}</h2>`)
+                    break
+                case 2:
+                    let primeiraPosicaoCaractere = frase.indexOf('a')
+                    document.write(`<h2>A primeira aparição do caractere 'a' é na posição ${primeiraPosicaoCaractere}</h2>`)
+                    break
+                case 3:
+                    let substituirFrase = frase.replace(frase, 'Outra frase')
+                    document.write(`<h2>A frase substituida é: ${substituirFrase}</h2>`)
+                    break
+                case 4:
+                    let primeirosDezCaractere = frase.substr(0, 9)
+                    document.write(`<h2>Dez primeiros caracteres: ${primeirosDezCaractere}</h2>`)
+                    break
+                case 5:
+                    let fraseMaiúscula = frase.toUpperCase()
+                    document.write(`A frase em maiúscula é: ${fraseMaiúscula}`)
+                    break
+                case 6:
+                    let fraseMinúscula = frase.toLowerCase()
+                    document.write(`A frase em minúscula é: ${fraseMinúscula}`)
+                    break
+                default:
+                document.write('Nenhuma o opção')
+            }
+        </script>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+        
+</body>
+</html>
