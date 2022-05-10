@@ -9,27 +9,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Javascript</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     
     <main class="container">
-        <header>
+        <header id="home">
             <h1>Atividade 07: Funções Matemáticas</h1>
             <hr>
         </header>
+        
+        <section>
+            <nav class="text-center">
+                <a class="p-4" href="#sqrt">Math.sqrt</a>
+                <a class="p-4" href="#sin">Math.sin</a>
+                <a class="p-4" href="#cos">Math.cos</a>
+                <a class="p-4" href="#tan">Math.tan</a>
+                <a class="p-4" href="#ceil">Math.ceil</a>
+                <a class="p-4" href="#floor">Math.floor</a>
+            </nav>
+        </section>
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="">Math.max</a></li>
-                <li><a href="">Math.min</a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
-        </nav>
+        <section>
+            <nav class="text-center">
+                <a class="p-2" href="#random">Math.random</a>
+                <a class="p-2" href="#pow">Math.pow</a>                 
+                <a class="p-2" href="#round">Math.round</a>
+                <a class="p-2" href="#trunc">Math.trunc</a>
+                <a class="p-2" href="#max">Math.max</a>
+                <a class="p-2" href="#min">Math.min</a>
+            </nav>
+        </section>
 
-        <h2 class="text-success">Math.sqrt</h2>
-        <section class="fs-4">
+        <h2 class="text-success mt-5">Math.sqrt</h2>
+        <section class="fs-4" id="sqrt">
             <p>
                 Sintaxe: <br>
                 Math.sqrt(x)
@@ -40,80 +57,121 @@
             </script>
             <p class="text-danger">
                 Exemplo: <br>
-                let numeroMaior = Math.sqrt(20) <br>
-                <script>document.write(raizQuadrada)</script>
+                let numeroMaior = Math.sqrt(4) <br>
+                <span class="text-primary"><script>document.write(raizQuadrada)</script></span>
             </p>
         </section>
 
-        <h2 class="text-success">Math.sin</h2>
+        <h2 id="sin" class="text-success mt-5">Math.sin</h2>
         <section class="fs-4">
             <p>
                 Sintaxe: <br>
                 Math.sin(x)
             </p>
-            <p>O método math.sin() retorna o número com maior valor</p>
+            <p>O método math.sin() retorna o seno de um número</p>
             <script>
-                let numeroMaior = Math.max(20, 10)
+                let seno = Math.max(5)
             </script>
             <p class="text-danger">
                 Exemplo: <br>
-                let numeroMaior = Math.max(20, 10) <br>
-                <script>document.write(numeroMaior)</script>
+                let seno = Math.max(20, 10) <br>
+                document.write(seno)
+                <script>document.write(seno)</script>
             </p>
         </section>
+        <a href="#home">Home</a>
 
-        <h2 class="text-success">Math.cos</h2>
+        <h2 id="cos" class="text-success mt-5">Math.cos</h2>
         <section class="fs-4">
             <p>
                 Sintaxe: <br>
                 Math.cos(x)
             </p>
-            <p>O método math.cos()</p>
+            <p>O método math.cos() retorna o cosseno de um número</p>
             <script>
-                let numeroMaior = Math.cos(20)
+                let cosseno = Math.cos(20)
             </script>
             <p class="text-danger">
                 Exemplo: <br>
-                let numeroMaior = Math.cos(20) <br>
-                <script>document.write(numeroMaior)</script>
+                let cosseno = Math.cos(20) <br>
+                <span class="text-primary"><script>document.write(cosseno)</script></span>
             </p>
         </section>
+        <a href="#home">Home</a>
 
-        <h2 class="text-success">Math.max</h2>
+        <h2 id="tan" class="text-success mt-5">Math.tan</h2>
         <section class="fs-4">
             <p>
                 Sintaxe: <br>
-                Math.max(x, y)
+                Math.tan(x)
             </p>
-            <p>O método math.max() retorna o número com maior valor</p>
+            <p>O método math.tan() retorna a tangente de um número</p>
             <script>
-                let numeroMaior = Math.max(20, 10)
+                let tangente = Math.tan(1)
             </script>
             <p class="text-danger">
                 Exemplo: <br>
-                let numeroMaior = Math.max(20, 10) <br>
-                <script>document.write(numeroMaior)</script>
+                let tangente = Math.tan(1) <br>
+                <span class="text-primary"><script>document.write(tangente)</script></span>
             </p>
         </section>
+        <a href="#home">Home</a>
 
-        <h2 class="text-success mt-5">Math.min</h2>
+        <h2 id="ceil" class="text-success mt-5">Math.ceil</h2>
         <section class="fs-4">
             <p>
                 Sintaxe: <br>
-                Math.min(x, y)
+                Math.ceil(x)
             </p>
-            <p>O método math.min() retorna o número com menor valor</p>
+            <p>O método math.ceil() arredonda um número para cima para o mais próximo inteiro</p>
             <script>
-                let numeroMenor = Math.min(20, 10)
+                let arredondaCima = Math.ceil(2.2)
             </script>
             <p class="text-danger">
                 Exemplo: <br>
-                let numeroMenor = Math.min(20, 10) <br>
-                <script>document.write(numeroMenor)</script>
+                let arredondaCima = Math.ceil(2.2) <br>
+                <span class="text-primary"><script>document.write(arredondaCima)</script></span>
             </p>
         </section>
+        <a href="#home">Home</a>
 
-        <h2 class="text-success mt-5">Math.pow</h2>
+        <h2 id="floor" class="text-success mt-5">Math.floor</h2>
+        <section class="fs-4">
+            <p>
+                Sintaxe: <br>
+                Math.floor(x)
+            </p>
+            <p>O método math.floor() arredonda um número para baixo para o mais próximo inteiro</p>
+            <script>
+                let arredondaBaixo = Math.floor(2.7)
+            </script>
+            <p class="text-danger">
+                Exemplo: <br>
+                let arredondaBaixo = Math.floor(2.7) <br>
+                <span class="text-primary"><script>document.write(arredondaBaixo)</script></span>
+            </p>
+        </section>
+        <a href="#home">Home</a>
+
+        <h2 id="random" class="text-success mt-5">Math.random</h2>
+        <section class="fs-4">
+            <p>
+                Sintaxe: <br>
+                Math.random()
+            </p>
+            <p>O método math.random() retorna um número aleatório >= 0 e > 1</p>
+            <script>
+                let aleatorio = Math.random()
+            </script>
+            <p class="text-danger">
+                Exemplo: <br>
+                let aleatorio = Math.random() <br>
+                <span class="text-primary"><script>document.write(aleatorio)</script></span>
+            </p>
+        </section>
+        <a href="#home">Home</a>
+
+        <h2 id="pow" class="text-success mt-5">Math.pow</h2>
         <section class="fs-4">
             <p>
                 Sintaxe: <br>
@@ -129,8 +187,9 @@
                 <script>document.write(potencia)</script>
             </p>
         </section>
+        <a href="#home">Home</a>
 
-        <h2 class="text-success mt-5">Math.round</h2>
+        <h2 id="round" class="text-success mt-5">Math.round</h2>
         <section class="fs-4">
             <p>
                 Sintaxe: <br>
@@ -146,8 +205,9 @@
                 <script>document.write(arredonda)</script>
             </p>
         </section>
+        <a href="#home">Home</a>
 
-        <h2 class="text-success mt-5">Math.trunc</h2>
+        <h2 id="trunc" class="text-success mt-5">Math.trunc</h2>
         <section class="fs-4">
             <p>
                 Sintaxe: <br>
@@ -167,8 +227,44 @@
                 <script>document.write(parteInteira)</script>
             </p>
         </section>
-        
+        <a href="#home">Home</a>
 
+        <h2 id="max" class="text-success mt-5">Math.max</h2>
+        <section class="fs-4">
+            <p>
+                Sintaxe: <br>
+                Math.max(x, y)
+            </p>
+            <p>O método math.max() retorna o número com maior valor</p>
+            <script>
+                let numeroMaior = Math.max(20, 10)
+            </script>
+            <p class="text-danger">
+                Exemplo: <br>
+                let numeroMaior = Math.max(20, 10) <br>
+                <script>document.write(numeroMaior)</script>
+            </p>
+        </section>
+        <a href="#home">Home</a>
+
+        <h2 id="min" class="text-success mt-5">Math.min</h2>
+        <section class="fs-4">
+            <p>
+                Sintaxe: <br>
+                Math.min(x, y)
+            </p>
+            <p>O método math.min() retorna o número com menor valor</p>
+            <script>
+                let numeroMenor = Math.min(20, 10)
+            </script>
+            <p class="text-danger">
+                Exemplo: <br>
+                let numeroMenor = Math.min(20, 10) <br>
+                <script>document.write(numeroMenor)</script>
+            </p>
+        </section>
+        <a href="#home">Home</a>
+        
     </main>
 
 
