@@ -20,19 +20,98 @@
     
     <main class="container">
         <header>
-            <h1></h1>
+            <h1>Jogo Pedra, papel, tesoura</h1>
             <hr>
         </header>
 
+        <h2>Clique na imagem para escolher uma opção:</h2>
         <div class="text-center">
-            <a href="#"><img src="img/pedra.jpg" onclick="" alt=""></a>
+            <a href="#" id="pedra" onclick="verificarResultadoPedra()"><img src="img/pedra.jpg" alt="pedra"></a>
         </div>
 
         <section class="text-center mt-5">
-            <img class="mx-5" src="img/papel.jpg" alt="">
-            <img class="mx-5" src="img/tesoura.jpg" alt="">
+            <a href="#" id="papel" onclick="verificarResultadoPapel()"><img class="mx-5" src="img/papel.jpg" alt=""></a>
+            <a href="#" id="tesoura" onclick="verificarResultadoTesoura()"><img class="mx-5" src="img/tesoura.jpg" alt=""></a>
         </section>
     </main>
+
+    <script>
+        let escolhaPedra = document.getElementById('pedra')
+        let escolhaPapel = document.getElementById('papel')
+        let escolhaTesoura = document.getElementById('tesoura')
+
+        function verificarResultadoPedra() {
+
+            //1= Pedra, 2= Papel, 3= Tesoura 
+            let escolhaComputador = Math.floor((Math.random() * 3) + 1)
+            console.log(escolhaComputador)
+
+            if(escolhaPedra && escolhaComputador == 1) {
+                var resultado = 'Empate!'
+                document.write('<h1>Sua escolha: Pedra</h1>')
+                document.write(`<h1>Escolha computador: ${escolhaComputador}</h1>`)
+                document.write(`<h1>${resultado}</h2>`)
+            } else if(escolhaPedra && escolhaComputador == 2) {
+                var resultado = 'Computador Venceu!'
+                document.write('<h1>Sua escolha: Pedra</h1>')
+                document.write(`<h1>Escolha computador: Papel</h1>`)
+                document.write(`<h1>${resultado}</h2>`)
+            } else if(escolhaPedra && escolhaComputador == 3) {
+                var resultado = 'Você venceu!'
+                document.write('<h1>Sua escolha: Pedra</h1>')
+                document.write(`<h1>Escolha computador: Tesoura</h1>`)
+                document.write(`<h1>${resultado}</h2>`)
+            }
+        }
+
+        function verificarResultadoPapel() {
+
+            //1= Pedra, 2= Papel, 3= Tesoura 
+            let escolhaComputador = Math.floor((Math.random() * 3) + 1)
+            console.log(escolhaComputador)
+
+            if(escolhaPapel && escolhaComputador == 1) {
+                var resultado = 'Você venceu!'
+                document.write('<h1>Sua escolha: Papel</h1>')
+                document.write(`<h1>Escolha computador: Pedra</h1>`)
+                document.write(`<h1>${resultado}</h2>`)
+            } else if(escolhaPapel && escolhaComputador == 2) {
+                var resultado = 'Empate!'
+                document.write('<h1>Sua escolha: Papel</h1>')
+                document.write(`<h1>Escolha computador: Papel</h1>`)
+                document.write(`<h1>${resultado}</h2>`)
+            } else if(escolhaPapel && escolhaComputador == 3) {
+                var resultado = 'Computador venceu!'
+                document.write('<h1>Sua escolha: Papel</h1>')
+                document.write(`<h1>Escolha computador: Tesoura</h1>`)
+                document.write(`<h1>${resultado}</h2>`)
+            }
+        }
+
+        function verificarResultadoTesoura() {
+
+            //1= Pedra, 2= Papel, 3= Tesoura 
+            let escolhaComputador = Math.floor((Math.random() * 3) + 1)
+            console.log(escolhaComputador)
+
+            if(escolhaTesoura && escolhaComputador == 1) {
+                var resultado = 'Computador venceu!'
+                document.write('<h1>Sua escolha: Tesoura</h1>')
+                document.write(`<h1>Escolha computador: Pedra</h1>`)
+                document.write(`<h1>${resultado}</h2>`)
+            } else if(escolhaTesoura && escolhaComputador == 2) {
+                var resultado = 'Você venceu!'
+                document.write('<h1>Sua escolha: Tesoura</h1>')
+                document.write(`<h1>Escolha computador: Papel</h1>`)
+                document.write(`<h1>${resultado}</h2>`)
+            } else if(escolhaTesoura && escolhaComputador == 3) {
+                var resultado = 'Empate!'
+                document.write('<h1>Sua escolha: Tesoura</h1>')
+                document.write(`<h1>Escolha computador: Tesoura</h1>`)
+                document.write(`<h1>${resultado}</h2>`)
+            }
+        }
+    </script>
 
 
 
