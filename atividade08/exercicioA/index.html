@@ -15,6 +15,12 @@
             document.getElementById('entrada').style.backgroundColor = bg_verde
         }
 
+        function recuperarDados() {
+            let caracter = document.getElementById('entrada').value
+            alert(caracter)
+            return caracter
+        }
+
         function corAmarelo(bg_amarelo) {
             return document.getElementById('basic-addon1').style.backgroundColor = bg_amarelo
         }
@@ -23,6 +29,15 @@
             document.getElementById('entrada').style.backgroundColor = bg_azul
         }
 
+        function verificar() {
+    
+            console.log(caracter.length)
+            if(recuperarDados().length > 3) {
+                corAmarelo('#f7ce04')
+            }else {
+                corAzul('#12227f')
+            }
+        }
     </script>
 </head>
 <body>
@@ -37,16 +52,15 @@
             <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Insira qualquer texto</span>
             </div>
-            <input type="text" onfocus="mudarCorFundo('#04aa6d')" onblur="vouPensar()" id="entrada">
+            <input type="text" onfocus="mudarCorFundo('#04aa6d')" onblur="recuperarDados()" id="entrada">
+            <input type="text" onblur="verificar()">
         </div>
 
     
         <script>
-            function vouPensar() {
-                let caracter = document.getElementById('entrada').value
-                alert(caracter)
+            function verificar() {
     
-                console.log(caracter.lenght)
+                console.log(caracter.length)
                 if(caracter.lenght > 3) {
                     corAmarelo('#f7ce04')
                 }else {
