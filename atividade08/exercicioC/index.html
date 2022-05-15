@@ -33,6 +33,10 @@
             <a href="#" id="papel" onclick="verificarResultadoPapel()"><img class="mx-5" src="img/papel.jpg" alt=""></a>
             <a href="#" id="tesoura" onclick="verificarResultadoTesoura()"><img class="mx-5" src="img/tesoura.jpg" alt=""></a>
         </section>
+
+        <h1 id="usuario"></h1>
+        <h1 id="computador"></h1>
+        <h1 id="resultado"></h1>
     </main>
 
     <script>
@@ -47,20 +51,26 @@
             console.log(escolhaComputador)
 
             if(escolhaPedra && escolhaComputador == 1) {
-                var resultado = 'Empate!'
-                document.write('<h1>Sua escolha: Pedra</h1>')
-                document.write(`<h1>Escolha computador: ${escolhaComputador}</h1>`)
-                document.write(`<h1>${resultado}</h2>`)
+                let resultado = 'Empate!'
+                let escolhaUsuario = 'Sua escolha: Pedra'
+                let escolhaComputador = 'Escolha computador: Pedra'
+                document.getElementById('usuario').innerHTML = escolhaUsuario
+                document.getElementById('computador').innerHTML = escolhaComputador
+                document.getElementById('resultado').innerHTML = resultado
             } else if(escolhaPedra && escolhaComputador == 2) {
                 var resultado = 'Computador Venceu!'
-                document.write('<h1>Sua escolha: Pedra</h1>')
-                document.write(`<h1>Escolha computador: Papel</h1>`)
-                document.write(`<h1>${resultado}</h2>`)
+                let escolhaUsuario = 'Sua escolha: Pedra'
+                let escolhaComputador = 'Escolha computador: Papel'
+                document.getElementById('usuario').innerHTML = escolhaUsuario
+                document.getElementById('computador').innerHTML = escolhaComputador
+                document.getElementById('resultado').innerHTML = resultado
             } else if(escolhaPedra && escolhaComputador == 3) {
                 var resultado = 'Você venceu!'
-                document.write('<h1>Sua escolha: Pedra</h1>')
-                document.write(`<h1>Escolha computador: Tesoura</h1>`)
-                document.write(`<h1>${resultado}</h2>`)
+                let escolhaUsuario = 'Sua escolha: Pedra'
+                let escolhaComputador = 'Escolha computador: Tesoura'
+                document.getElementById('usuario').innerHTML = escolhaUsuario
+                document.getElementById('computador').innerHTML = escolhaComputador
+                document.getElementById('resultado').innerHTML = resultado
             }
         }
 
@@ -71,20 +81,26 @@
             console.log(escolhaComputador)
 
             if(escolhaPapel && escolhaComputador == 1) {
-                var resultado = 'Você venceu!'
-                document.write('<h1>Sua escolha: Papel</h1>')
-                document.write(`<h1>Escolha computador: Pedra</h1>`)
-                document.write(`<h1>${resultado}</h2>`)
+                let resultado = 'Você venceu!'
+                let escolhaUsuario = 'Sua escolha: Papel'
+                let escolhaComputador = 'Escolha computador: Pedra'
+                document.getElementById('usuario').innerHTML = escolhaUsuario
+                document.getElementById('computador').innerHTML = escolhaComputador
+                document.getElementById('resultado').innerHTML = resultado
             } else if(escolhaPapel && escolhaComputador == 2) {
-                var resultado = 'Empate!'
-                document.write('<h1>Sua escolha: Papel</h1>')
-                document.write(`<h1>Escolha computador: Papel</h1>`)
-                document.write(`<h1>${resultado}</h2>`)
+                let resultado = 'Empate!'
+                let escolhaUsuario = 'Sua escolha: Papel'
+                let escolhaComputador = 'Escolha computador: Papel'
+                document.getElementById('usuario').innerHTML = escolhaUsuario
+                document.getElementById('computador').innerHTML = escolhaComputador
+                document.getElementById('resultado').innerHTML = resultado
             } else if(escolhaPapel && escolhaComputador == 3) {
-                var resultado = 'Computador venceu!'
-                document.write('<h1>Sua escolha: Papel</h1>')
-                document.write(`<h1>Escolha computador: Tesoura</h1>`)
-                document.write(`<h1>${resultado}</h2>`)
+                let resultado = 'Computador venceu!'
+                let escolhaUsuario = 'Sua escolha: Papel'
+                let escolhaComputador = 'Escolha computador: Tesoura'
+                document.getElementById('usuario').innerHTML = escolhaUsuario
+                document.getElementById('computador').innerHTML = escolhaComputador
+                document.getElementById('resultado').innerHTML = resultado
             }
         }
 
@@ -95,20 +111,26 @@
             console.log(escolhaComputador)
 
             if(escolhaTesoura && escolhaComputador == 1) {
-                var resultado = 'Computador venceu!'
-                document.write('<h1>Sua escolha: Tesoura</h1>')
-                document.write(`<h1>Escolha computador: Pedra</h1>`)
-                document.write(`<h1>${resultado}</h2>`)
+                let resultado = 'Computador venceu!'
+                let escolhaUsuario = 'Sua escolha: Tesoura'
+                let escolhaComputador = 'Escolha computador: Pedra'
+                document.getElementById('usuario').innerHTML = escolhaUsuario
+                document.getElementById('computador').innerHTML = escolhaComputador
+                document.getElementById('resultado').innerHTML = resultado
             } else if(escolhaTesoura && escolhaComputador == 2) {
-                var resultado = 'Você venceu!'
-                document.write('<h1>Sua escolha: Tesoura</h1>')
-                document.write(`<h1>Escolha computador: Papel</h1>`)
-                document.write(`<h1>${resultado}</h2>`)
+                let resultado = 'Você venceu!'
+                let escolhaUsuario = 'Sua escolha: Tesoura'
+                let escolhaComputador = 'Escolha computador: Papel'
+                document.getElementById('usuario').innerHTML = escolhaUsuario
+                document.getElementById('computador').innerHTML = escolhaComputador
+                document.getElementById('resultado').innerHTML = resultado
             } else if(escolhaTesoura && escolhaComputador == 3) {
-                var resultado = 'Empate!'
-                document.write('<h1>Sua escolha: Tesoura</h1>')
-                document.write(`<h1>Escolha computador: Tesoura</h1>`)
-                document.write(`<h1>${resultado}</h2>`)
+                let resultado = 'Empate!'
+                let escolhaUsuario = 'Sua escolha: Tesoura'
+                let escolhaComputador = 'Escolha computador: Tesoura'
+                document.getElementById('usuario').innerHTML = escolhaUsuario
+                document.getElementById('computador').innerHTML = escolhaComputador
+                document.getElementById('resultado').innerHTML = resultado
             }
         }
     </script>
