@@ -19,17 +19,21 @@
         </header>
 
         <button onclick="contar()">Iniciar</button>
-        <button onclick="clearInterval(contador)">Parar</button>
+        <button onclick="parar()">Parar</button>
         <p id="demo"></p>
 
         <script>
-            let contador = setInterval(contar, 1000)
             
             function contar() {
-                for(i = 0; i < 10; i++) {
-                    document.getElementById('demo').innerHTML += i
-                    
-                }
+                let contador = setInterval(contar, 1000)
+                let segundos = 0
+                
+                segundos++
+                document.getElementById('demo').innerHTML = segundos
+                console.log(segundos)
+                
+
+                
             }
         </script>
     </main>
