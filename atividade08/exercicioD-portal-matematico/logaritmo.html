@@ -9,30 +9,47 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Javascript</title>
+    <style>
+        section {
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: aqua;
+            padding: 10px 1px 15px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     
     <main class="container">
         <header>
             <h1>Logaritmo</h1>
+            <a href="index.html"><img src="img/icons8-home.svg" alt="home"></a>
             <hr>
         </header>
 
-        <h2>Insira o valor abaixo para calcular o logaritmo</h2>
-        <input type="text" id="log" placeholder="Valor" onfocus="mudarCorAzul('#0dcaf0')" onblur="mudarCorBranco('#ffffff')"> <br>
-        <button class="mt-2 btn btn-info" onclick="calcularLog()">Calcular</button>
-        <h2>Resultado = <span id="resultado"></span></h2>
+        <section class="bg-success p-2">
+            <h2>Insira o valor abaixo para calcular o logaritmo</h2>
+            <input type="text" id="log" placeholder="Valor" onfocus="mudarCorAzul('#0dcaf0')" onblur="mudarCorBranco('#ffffff')"> <br>
+            <button class="mt-2 btn btn-info" onclick="calcularLog()">Calcular</button>
+            <h2>Resultado = <span id="resultado"></span></h2>
+        </section>
 
-        <h2 class="mt-5">Insira o valor abaixo para calcular o logaritmo na base 2</h2>
-        <input type="text" id="log2" placeholder="Valor" onfocus="mudarCorAmarelo('#ffc107')" onblur="mudarCorBranco('#ffffff')"> <br>
-        <button class="mt-2 btn btn-warning" onclick="calcularLog2()">Calcular</button>
-        <h2>Resultado = <span id="resultadoLog2"></span></h2>
+        <section class="bg-info p-2 mt-5">
+            <h2>Insira o valor abaixo para calcular o logaritmo na base 2</h2>
+            <input type="text" id="log2" placeholder="Valor" onfocus="mudarCorAmarelo('#ffc107')" onblur="mudarCorBranco('#ffffff')"> <br>
+            <button class="mt-2 btn btn-warning" onclick="calcularLog2()">Calcular</button>
+            <h2>Resultado = <span id="resultadoLog2"></span></h2>
+        </section>
 
-        <h2 class="mt-5">Insira o valor abaixo para calcular o logaritmo na base 10</h2>
-        <input type="text" id="log10" placeholder="Valor"> <br>
-        <button class="mt-2 btn btn-success" onclick="calcularLog10()">Calcular</button>
-        <h2>Resultado = <span id="resultadoLog10"></span></h2>
-
+        <section class="bg-warning p-2 mt-5">
+            <h2>Insira o valor abaixo para calcular o logaritmo na base 10</h2>
+            <input type="text" id="log10" placeholder="Valor" onfocus="mudarCorVerde('#198754')" onblur="mudarCorBranco('#ffffff')"> <br>
+            <button class="mt-2 btn btn-success" onclick="calcularLog10()">Calcular</button>
+            <h2>Resultado = <span id="resultadoLog10"></span></h2>
+        </section>
         <script>
             function calcularLog() {
                 let valor = document.getElementById('log').value
@@ -60,7 +77,7 @@
                 document.getElementById('log2').style.backgroundColor = bg_amarelo
             }
 
-            function mudarCorAmarelo(bg_verde) {
+            function mudarCorVerde(bg_verde) {
                 document.getElementById('log10').style.backgroundColor = bg_verde
             }
             

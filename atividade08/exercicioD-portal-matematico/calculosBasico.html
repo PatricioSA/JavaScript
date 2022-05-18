@@ -11,12 +11,28 @@
     <title>Javascript</title>
 
     <style>
+        body {
+            background-color: #fafafa;
+        }
         p {
-            background-color: gray;
-            width: 170px;
+            background-color: #535353;
+            color: #fafafa;
+            width: 180px;
             height: 40px;
             line-height: 40px;
             padding-left: 2px;
+            border-radius: 5px;
+        }
+
+        input {
+            background-color: #535353;
+            color: #fafafa;
+            height: 35px;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #ff0043;
         }
     </style>
 </head>
@@ -28,22 +44,25 @@
             <hr>
         </header>
 
-        <input type="text" placeholder="Insira um valor" id="valor1">
-        <select class="text-center" id="operador">
-            <option>Escolha uma operação</option>
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">X</option>
-            <option value="/">/</option>
-        </select>
-        <input type="text" placeholder="Insira um valor" id="valor2">
-
-        <button onclick="calcular()">Calcular</button>
+        <section class="text-center">
+            <input type="text" placeholder="Insira um valor" id="valor1">
+            <select class="text-center" id="operador">
+                <option>Escolha uma operação</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">X</option>
+                <option value="/">/</option>
+            </select>
+            <input type="text" placeholder="Insira um valor" id="valor2">
+        
+            <button class="btn" onclick="calcular()">Calcular</button>
+        </section>
 
         <br>
-        <br>
 
-        <p id="resultado">Resultado...</p>
+        <section class="row justify-content-center">
+            <p class="col-4" id="resultado">Resultado...</p>
+        </section>
 
         <script>
             function calcular() {
