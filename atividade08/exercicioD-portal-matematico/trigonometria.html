@@ -28,21 +28,21 @@
 
         <h2>Insira os valores abaixo para calcular a hipotenusa:</h2>
         <input type="text" id="ca" placeholder="Valor do cateto adjacente"> <br>
-        <input type="text" id="co" placeholder="Valor do cateto oposto"> <br>
-        <button onclick="calcularHipotenusa()">Calcular</button>
+        <input class="mt-1" type="text" id="co" placeholder="Valor do cateto oposto"> <br>
+        <button class="mt-2 btn btn-info" onclick="calcularHipotenusa()">Calcular</button>
         <h2>Hipotenusa = <span id="resultado"></span></h2>
 
         
         <h2 class="mt-5">Insira os valores abaixo para calcular o cateto adjacente:</h2>
         <input type="text" id="hp" placeholder="Valor da hipotenusa"> <br>
-        <input type="text" id="co2" placeholder="Valor do cateto oposto"> <br>
-        <button onclick="calcularCatetoAdjacente()">Calcular</button>
+        <input class="mt-1" type="text" id="co2" placeholder="Valor do cateto oposto"> <br>
+        <button class="mt-2 btn btn-info" onclick="calcularCatetoAdjacente()">Calcular</button>
         <h2>Cateto adjacente = <span id="resultadoCA"></span></h2>
 
         <h2 class="mt-5">Insira os valores abaixo para calcular o cateto oposto:</h2>
         <input type="text" id="hp2" placeholder="Valor da hipotenusa"> <br>
-        <input type="text" id="ca2" placeholder="Valor do cateto adjacente"> <br>
-        <button onclick="calcularCatetoOposto()">Calcular</button>
+        <input class="mt-1" type="text" id="ca2" placeholder="Valor do cateto adjacente"> <br>
+        <button class="mt-2 btn btn-info" onclick="calcularCatetoOposto()">Calcular</button>
         <h2>Cateto oposto = <span id="resultadoCO"></span></h2>
 
         <script>
@@ -58,9 +58,7 @@
                 let catetoOposto = document.getElementById('co2').value
                 let hipotenusa = document.getElementById('hp').value
                 let catetoAdjacente = Math.sqrt(Math.pow(catetoOposto, 2) - Math.pow(hipotenusa, 2))
-                console.log(Math.pow(catetoOposto, 2))
-                console.log(Math.pow(hipotenusa, 2))
-                console.log(catetoAdjacente)
+
                 document.getElementById('resultadoCA').innerHTML = catetoAdjacente
             }
 
@@ -68,7 +66,7 @@
                 let catetoAdjacente = document.getElementById('ca2').value
                 let hipotenusa = document.getElementById('hp2').value
                 let catetoOposto = Math.sqrt(Math.pow(hipotenusa, 2) - Math.pow(catetoAdjacente, 2))
-                console.log(catetoAdjacente)
+
                 document.getElementById('resultadoCO').innerHTML = catetoOposto
             }
         </script>
