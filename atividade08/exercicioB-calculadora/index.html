@@ -33,7 +33,7 @@
 
         #igual {
             position: fixed;
-            margin-left: 29.6%;
+            margin-left: 15%;
             width: 65px;
             height: 130px;
         }
@@ -94,7 +94,7 @@
 
     <script>
         function inserir(num) {
-            //Pega o botão que foi clicado e armazena na variável
+            //Pega o que está na tela e armazena na variável
             var numero = document.getElementById('tela').innerHTML
     
             //Insere na tela um numero na frente do outro
@@ -110,10 +110,9 @@
             //pega a expressão que está na tela e armazena na variável
             let expressão = document.getElementById('tela').innerHTML
 
-            //se tiver uma expressão na tela calcula a expressão
-            if(expressão) {
-                document.getElementById('tela').innerHTML = eval(expressão)
-            }
+            //calcula a expressão que está na tela
+            document.getElementById('tela').innerHTML = eval(expressão)
+            
         }
     </script>
 

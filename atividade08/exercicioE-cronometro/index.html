@@ -19,10 +19,13 @@
             border-radius: 5px;
         }
 
-        button {
-            font-size: 30px;
+        .btn {
+            font-size: 26px;
         }
 
+        .btn:hover {
+            color: #ff0043;
+        }
 
     </style>
 </head>
@@ -43,9 +46,9 @@
         </div>
 
         <div class="text-center mt-2">
-            <button onclick="iniciar()">Iniciar</button>
-            <button onclick="pausar()">Pausar</button>
-            <button onclick="resetar()">Resetar</button>
+            <button class="btn btn-dark" onclick="iniciar()">Iniciar</button>
+            <button class="btn btn-dark" onclick="pausar()">Pausar</button>
+            <button class="btn btn-dark" onclick="resetar()">Resetar</button>
         </div>
 
         <script>
