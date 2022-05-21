@@ -39,31 +39,46 @@
         </main>
 
     <script>
-        let escolhaPedra = document.getElementById('pedra')
+        let escolhaUsuario = ''
+        if(document.getElementById('pedra')) {
+            escolhaUsuario = 'Pedra'
+        }
+        
+        //let escolhaPedra = document.getElementById('pedra')
         let escolhaPapel = document.getElementById('papel')
         let escolhaTesoura = document.getElementById('tesoura')
+
+        let escolhaComputador
+        let numeroAleatorio = Math.floor((Math.random() * 3) + 1)
+        if(numeroAleatorio == 1){
+            escolhaComputador = 'Pedra'
+        }else if(escolhaComputador == 2) {
+            escolhaComputador = 'Papel'
+        }else if(escolhaComputador == 3) {
+            escolhaComputador = 'Tesoura'
+        }
 
         function verificarResultadoPedra() {
 
             //1= Pedra, 2= Papel, 3= Tesoura 
-            let escolhaComputador = Math.floor((Math.random() * 3) + 1)
-            console.log(escolhaComputador)
+            //let escolhaComputador = Math.floor((Math.random() * 3) + 1)
+            //console.log(escolhaComputador)
 
-            if(escolhaPedra && escolhaComputador == 1) {
+            if(escolhaPedra && escolhaComputador == 'Pedra') {
                 let resultado = 'Empate!'
                 let escolhaUsuario = 'Pedra'
                 let escolhaComputador = 'Pedra'
                 document.getElementById('usuario').innerHTML = escolhaUsuario
                 document.getElementById('computador').innerHTML = escolhaComputador
                 document.getElementById('resultado').innerHTML = resultado
-            } else if(escolhaPedra && escolhaComputador == 2) {
+            } else if(escolhaPedra && escolhaComputador == 'Pedra') {
                 var resultado = 'Computador Venceu!'
                 let escolhaUsuario = 'Pedra'
                 let escolhaComputador = 'Papel'
                 document.getElementById('usuario').innerHTML = escolhaUsuario
                 document.getElementById('computador').innerHTML = escolhaComputador
                 document.getElementById('resultado').innerHTML = resultado
-            } else if(escolhaPedra && escolhaComputador == 3) {
+            } else if(escolhaPedra && escolhaComputador == 'Pedra') {
                 var resultado = 'Você venceu!'
                 let escolhaUsuario = 'Pedra'
                 let escolhaComputador = 'Tesoura'
