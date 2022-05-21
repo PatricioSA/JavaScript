@@ -39,10 +39,7 @@
         </main>
 
     <script>
-        let escolhaUsuario = ''
-        if(document.getElementById('pedra')) {
-            escolhaUsuario = 'Pedra'
-        }
+        let escolhaUsuario = document.getElementById('pedra'); document.getElementById('papel'); document.getElementById('tesoura')
         
         //let escolhaPedra = document.getElementById('pedra')
         let escolhaPapel = document.getElementById('papel')
@@ -64,21 +61,21 @@
             //let escolhaComputador = Math.floor((Math.random() * 3) + 1)
             //console.log(escolhaComputador)
 
-            if(escolhaPedra && escolhaComputador == 'Pedra') {
+            if(escolhaUsuario && escolhaComputador == 'Pedra') {
                 let resultado = 'Empate!'
                 let escolhaUsuario = 'Pedra'
                 let escolhaComputador = 'Pedra'
                 document.getElementById('usuario').innerHTML = escolhaUsuario
                 document.getElementById('computador').innerHTML = escolhaComputador
                 document.getElementById('resultado').innerHTML = resultado
-            } else if(escolhaPedra && escolhaComputador == 'Pedra') {
+            } else if(escolhaUsuario && escolhaComputador == 'Pedra') {
                 var resultado = 'Computador Venceu!'
                 let escolhaUsuario = 'Pedra'
                 let escolhaComputador = 'Papel'
                 document.getElementById('usuario').innerHTML = escolhaUsuario
                 document.getElementById('computador').innerHTML = escolhaComputador
                 document.getElementById('resultado').innerHTML = resultado
-            } else if(escolhaPedra && escolhaComputador == 'Pedra') {
+            } else if(escolhaUsuario && escolhaComputador == 'Pedra') {
                 var resultado = 'Você venceu!'
                 let escolhaUsuario = 'Pedra'
                 let escolhaComputador = 'Tesoura'
